@@ -1,0 +1,41 @@
+<html>
+    <body>
+    <script>
+var sentence = prompt("Enter a word");
+    if(sentence.length==0)
+        {
+        document.write("<p>Please enter a word</p>")
+        }
+        else{
+var words = sentence.split(" ")
+document.write(words);
+var vowels = "aeiou"
+for (var index in words){    
+    var currentword = words[index]
+    var firstletter = currentword.slice(0,1)
+    var secondletter=currentword.slice(1,2)    
+    var pos = vowels.search(firstletter);
+
+    if (pos>= 0)
+        {
+     document.write("<p>The first letter is a vowel</p>")
+     document.write(currentword+"way")
+        }
+    else if(vowels.search(secondletter)>=0)
+    {  
+    document.write("<p>The first letters is a consonant</p>") 
+    document.write(currentword.slice(1)+firstletter+"ay")
+    }
+    
+    else{
+   document.write("<p>The first two letters are consonants</p>")
+ document.write(currentword.slice(2)+firstletter+secondletter+"ay");
+    }
+    document.write("<li>" + pos);
+}  
+        }
+
+</script>
+</body>
+</html>
+
