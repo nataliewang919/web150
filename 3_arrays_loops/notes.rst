@@ -114,6 +114,16 @@ Combining/Extracting Arrays
 
 **Loops**
 
+<<<<<<< HEAD
+=======
+for, in - loop through each item in an array object. Counter generated automatically.
+
+    for (var n in names) {
+        document.write(names[n] + "<br>");
+    }
+
+counted loops
+>>>>>>> brendenwest/master
 
     for (<expression1>; <expression2>; <expression3>) {
         // code to execute
@@ -144,6 +154,7 @@ Variants:
         document.write(names[i] + "<br>");
     }
 
+<<<<<<< HEAD
 
 for, in - loop through each item in an array object. Counter generated automatically.
 
@@ -151,20 +162,28 @@ for, in - loop through each item in an array object. Counter generated automatic
         document.write(names[n] + "<br>");
     }
 
+=======
+>>>>>>> brendenwest/master
 **while loops**
 
     while(<condition>) {
         // code to be executed
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> brendenwest/master
     var i = 0;
     while(names[i]) {
         console.log(names[i])
         i++;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> brendenwest/master
 - if we forget to increment the counter, loop will run forever
 
 Loops can contain any valid javascript code. For example:
@@ -174,7 +193,11 @@ Loops can contain any valid javascript code. For example:
     var maxAge = 0;
     var minAge = 100;
     
+<<<<<<< HEAD
     for (var i = 0; i < grades.length; i++) {
+=======
+    for (var i in grades) {
+>>>>>>> brendenwest/master
         sum += ages[i];
         if (ages[i] > maxAge) {
          maxAge = ages[i];
@@ -191,9 +214,34 @@ Loops can contain any valid javascript code. For example:
 
 Use ‘break’ to end loop before final condition is reached:
 
+<<<<<<< HEAD
     for (var i = 0; i < names.length; i++) {
+=======
+    for (var i in names) {
+>>>>>>> brendenwest/master
         if names[i] == “dave” {
             document.write("Found Dave!<br>");
             break;
          }
     }
+<<<<<<< HEAD
+=======
+
+**Exercises**
+
+Use this string for the following exercises:
+
+    var students = "jim-m, sue-f, mary-f, ann-f, ted-m, frank-m, lisa-f";
+
+- convert the string to an array,
+- print the number of array items
+- print the first array item
+- print the last array item
+- print each name (without gender)
+- print each name with first letter capitalized
+- print every other name
+- print the total count of male & female students
+- remove the last student from the array
+- remove the first student from the array
+- make a new array with a subset of students, using .slice()
+>>>>>>> brendenwest/master

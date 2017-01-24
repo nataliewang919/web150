@@ -1,0 +1,36 @@
+<html>
+<script>
+  var grades="jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";   
+  var students=grades.split(", ")
+//document.write("<li>"+students)
+students=students.sort()
+    var totalscore=0;
+    var highest=0;
+    var lowest=100;
+for(var i=0;i<students.length;i++)
+    {  
+    var score=[]    
+    students[i]=students[i].split("|")     
+    score[i]=parseInt(students[i][1])
+    totalscore=totalscore+score[i] 
+    name =students[i][0] 
+    students[i]= name.charAt(0).toUpperCase()+ name.slice(1)
+    document.write("<li>"+students[i]+"-"+score[i]+"<br>")
+
+   if(score[i]>highest)
+       {
+           highest=score[i]
+       }
+    if(score[i]<lowest)
+       {
+           lowest=score[i]
+       } 
+    }
+
+document.write("The total number of students is: "+students.length+"<br/>")  
+var avg=totalscore/students.length
+document.write("The avg score is: "+avg+"<br/>")
+document.write("The highest score is: "+highest+"<br/>")
+document.write("The lowest score is: "+lowest+"<br/>")
+</script>
+</html>
